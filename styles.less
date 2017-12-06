@@ -1,0 +1,129 @@
+@import url('variables.less');
+
+@accent: #ffa4ff;
+@display: Raleway, sans-serif;
+@nav-height: 80px;
+@hero-height: 450px;
+
+
+
+
+body {
+	color: #555;
+	background-color: #e2ddc1;
+	}
+
+
+h1, h2, h3 {
+	font-family: @display;
+	}
+	
+#hero {
+	background-image: url('fixed.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: @hero-height;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	@media (max-width: @screen-xs-max) {
+		margin-top: -@nav-height;
+	}}
+
+#hero div {
+	margin-top: calc(@nav-height / 2);
+	}
+
+
+
+.navbar {
+	min-height: @nav-height;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 0;
+	opacity: 0.9;
+	margin-bottom: 0;
+	z-index: @zindex-navbar;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	mix-blend-mode: multiply;
+
+	@media (max-width: @screen-xs-max) {
+		opacity: 1;
+		font-size: 1.5em;
+		position: relative;
+		mix-blend-mode: normal;
+	}}
+
+
+
+.navbar .container-fluid { margin: 0;}
+.navbar-toggle { position: absolute; top: 12px; right: 10px; }
+.navbar-toggle .icon-bar { width: 30px; height: 3px; }
+.navbar-toggle .icon-bar+.icon-bar { margin-top: 6px; }
+
+
+
+
+.navbar-nav {
+	float: none;
+	
+	@media (max-width: @screen-xs-max) {
+		margin-top: @nav-height;	
+	}}
+	
+	
+.navbar-nav>li {
+	@media (min-width: @screen-sm-min) {
+		float: none;
+		display: inline-block;
+		padding: 0em 0.5em 0em;
+
+	}
+	@media (max-width: @screen-xs-max) {
+		border-top: 1px solid #666;
+		padding: 0.75em;
+	}}
+
+
+	
+#menu {
+	font-family: @display;
+	font-size: 1.25em;
+	text-align: center;
+	
+	@media (max-width: @screen-xs-max) {
+		text-align: left;
+		width: 100%
+ 	}}
+
+#menu, #menu a {
+	color: #fff;
+	}
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/cIFypx4yrWPDz3zOxk7hIQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+	}
+
+
+
+
+
+
+
+
+
